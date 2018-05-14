@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import random
 
 coords = []
-with open('coord.txt','r') as f:
+with open('coord1.txt','r') as f:
     i = 0
     for line in f.readlines():
         line = [float(x.replace('\n','')) for x in line.split(' ')]

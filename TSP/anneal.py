@@ -46,7 +46,7 @@ class SimAnneal(object):
 
     def dist(self, coord1, coord2):
         """
-        Euclidean distance
+        欧式距离
         """
         return round(math.sqrt(math.pow(coord1[0] - coord2[0], 2) + math.pow(coord1[1] - coord2[1], 2)), 4)
 
