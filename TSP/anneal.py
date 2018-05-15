@@ -28,7 +28,7 @@ class SimAnneal(object):
 
     def initial_solution(self):
         """
-        Greedy algorithm to get an initial solution (closest-neighbour)
+        最邻近
         """
         cur_node = random.choice(self.nodes)
         solution = [cur_node]
@@ -114,6 +114,9 @@ class SimAnneal(object):
         Visualize the TSP route with matplotlib
         """
         visualize_tsp.plotTSP([self.best_solution], self.coords)
+        print("best solution", self.best_solution)
+        #for i in range(len(self.best_solution)):
+         #   print(i, self.best_solution[i])
 
     def plot_learning(self):
         """
