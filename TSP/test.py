@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import random
 
 coords = []
-with open('coord1.txt','r') as f:
+with open('coord.txt','r') as f:
     i = 0
     for line in f.readlines():
         line = [float(x.replace('\n','')) for x in line.split(' ')]
@@ -13,7 +13,7 @@ with open('coord1.txt','r') as f:
         i += 1
 
 if __name__ == '__main__':
-    sa = SimAnneal(coords, stopping_iter = 5000)
+    sa = SimAnneal(coords, stopping_iter = 10000)
     sa.anneal()
     sa.visualize_routes()
     sa.plot_learning()

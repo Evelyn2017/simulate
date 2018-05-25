@@ -3,6 +3,9 @@ import random
 from TSP import visualize_tsp
 import matplotlib.pyplot as plt
 
+x_8 = [[0,1000],[150.9364,150.9364]]
+x_20 = [[0,1000],[297.0314,297.0314]]
+
 
 class SimAnneal(object):
     def __init__(self, coords, T=-1, alpha=-1, stopping_T=-1, stopping_iter=-1):
@@ -51,32 +54,21 @@ class SimAnneal(object):
         return round(math.sqrt(math.pow(coord1[0] - coord2[0], 2) + math.pow(coord1[1] - coord2[1], 2)), 4)
 
     def to_dist_matrix(self, coords):
-        """
-        Returns nxn nested list from a list of length n
-        Used as distance matrix: mat[i][j] is the distance between node i and j
-        'coords' has the structure [[x1,y1],...[xn,yn]]
-        """
         n = len(coords)
         mat = [[self.dist(coords[i], coords[j]) for i in range(n)] for j in range(n)]
         return mat
 
     def fitness(self, sol):
-        """ Objective value of a solution """
+
         return round(sum([self.dist_matrix[sol[i - 1]][sol[i]] for i in range(1, self.N)]) +
                      self.dist_matrix[sol[0]][sol[self.N - 1]], 4)
 
     def p_accept(self, candidate_fitness):
-        """
-        Probability of accepting if the candidate is worse than current
-        Depends on the current temperature and difference between candidate and current
-        """
+
         return math.exp(-abs(candidate_fitness - self.cur_fitness) / self.T)
 
     def accept(self, candidate):
-        """
-        Accept with probability 1 if candidate is better than current
-        Accept with probabilty p_accept(..) if candidate is worse
-        """
+
         candidate_fitness = self.fitness(candidate)
         if candidate_fitness < self.cur_fitness:
             self.cur_fitness = candidate_fitness
@@ -106,23 +98,22 @@ class SimAnneal(object):
             self.fitness_list.append(self.cur_fitness)
 
         print('Best fitness obtained: ', self.best_fitness)
+        file = open("result.txt", "a")
+        file.write(str(self.best_fitness) + "\n")
+
         print('Improvement over greedy heuristic: ',
               round((self.initial_fitness - self.best_fitness) / (self.initial_fitness), 4))
 
     def visualize_routes(self):
-        """
-        Visualize the TSP route with matplotlib
-        """
+
         visualize_tsp.plotTSP([self.best_solution], self.coords)
         print("best solution", self.best_solution)
         #for i in range(len(self.best_solution)):
          #   print(i, self.best_solution[i])
 
     def plot_learning(self):
-        """
-        Plot the fitness through iterations
-        """
         plt.plot([i for i in range(len(self.fitness_list))], self.fitness_list)
         plt.ylabel('Fitness')
         plt.xlabel('Iteration')
+        # plt.plot(x_20[0],x_20[1])
         plt.show()
