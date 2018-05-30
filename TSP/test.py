@@ -13,7 +13,7 @@ with open('coord.txt','r') as f:
         i += 1
 
 if __name__ == '__main__':
-    sa = SimAnneal(coords, stopping_iter = 10000)
+    sa = SimAnneal(coords, stopping_iter = 40000)
     sa.anneal()
     sa.visualize_routes()
     sa.plot_learning()

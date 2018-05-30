@@ -2,15 +2,6 @@ import matplotlib.pyplot as plt
 
 def plotTSP(paths, points, num_iters=1):
 
-    """
-    path: List of lists with the different orders in which the nodes are visited
-    points: coordinates for the different nodes
-    num_iters: number of paths that are in the path list
-    """
-
-    # Unpack the primary TSP path and transform it into a list of ordered
-    # coordinates
-
     x = []; y = []
     for i in paths[0]:
         x.append(points[i][0])
@@ -18,7 +9,6 @@ def plotTSP(paths, points, num_iters=1):
 
     plt.plot(x, y, 'co')
 
-    # Set a scale for the arrow heads (there should be a reasonable default for this, WTF?)
     a_scale = float(max(x))/float(100)
 
     # Draw the older paths, if provided

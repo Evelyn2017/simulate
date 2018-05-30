@@ -3,12 +3,12 @@ import random
 from TSP import visualize_tsp
 import matplotlib.pyplot as plt
 
-x_8 = [[0,1000],[150.9364,150.9364]]
-x_20 = [[0,1000],[297.0314,297.0314]]
+x_8 = [[0, 1000], [150.9364, 150.9364]]
+x_20 = [[0, 1000], [297.0314, 297.0314]]
 
 
 class SimAnneal(object):
-    def __init__(self, coords, T=-1, alpha=-1, stopping_T=-1, stopping_iter=-1):
+    def __init__(self, coords, T=-1, alpha=0.99, stopping_T=-1, stopping_iter=-1):
         self.coords = coords
         self.N = len(coords)
         self.T = math.sqrt(self.N) if T == -1 else T
@@ -108,8 +108,8 @@ class SimAnneal(object):
 
         visualize_tsp.plotTSP([self.best_solution], self.coords)
         print("best solution", self.best_solution)
-        #for i in range(len(self.best_solution)):
-         #   print(i, self.best_solution[i])
+        # for i in range(len(self.best_solution)):
+        #   print(i, self.best_solution[i])
 
     def plot_learning(self):
         plt.plot([i for i in range(len(self.fitness_list))], self.fitness_list)
