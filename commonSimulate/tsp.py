@@ -13,15 +13,17 @@ def main():
     size_width = 20
     size_height = 20
 
-    population_size = 70
+    population_size = 20
 
     nodes = NodeGenerator(size_width, size_height, population_size).generate()
+
 
     sa = SimulatedAnnealing(nodes, temp, alpha, stopping_temp, stopping_iter)
     sa.anneal()
 
     sa.animateSolutions()
 
+    print(sa.best_solution)
     sa.plotLearning()
 
 

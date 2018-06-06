@@ -1,11 +1,8 @@
 import math
 import random
 import matplotlib.pyplot as plt
-#  import tsp_utils
-# import animated_visualizer
 
-import commonSimulate.tsp_utils as tsp_utils
-import commonSimulate.animated_visualizer as animated_visualizer
+import SimulatedAnnealing.tsp_utils as tsp_utils
 
 
 class SimulatedAnnealing:
@@ -70,20 +67,34 @@ class SimulatedAnnealing:
             self.weight_list.append(self.curr_weight)
             self.solution_history.append(self.curr_solution)
 
+        print('Sample size: ', self.sample_size)
         print('Minimum weight: ', self.min_weight)
         print('Improvement: ',
               round((self.initial_weight - self.min_weight) / (self.initial_weight), 4) * 100, '%')
 
-    def animateSolutions(self):
-        animated_visualizer.animateTSP(self.solution_history, self.coords)
+    def optimizedPrint(self):
+        xs = []
+        ys = []
+
+        for i in self.best_solution:
+            xs.append(int(self.coords[i][0]))
+            ys.append(int(self.coords[i][1]))
+
+        plt.title("Optimized weight: %s" % self.min_weight)
+
+        plt.plot(xs, ys, marker=".", color="black")
+        plt.plot(xs[0], ys[0], marker="*", color="red")
+        plt.plot(xs[-1], ys[-1], marker="*", color="green")
+        plt.show()
 
     def plotLearning(self):
         plt.plot([i for i in range(len(self.weight_list))], self.weight_list)
 
-
         line_init = plt.axhline(y=self.initial_weight, color='r', linestyle='--')
         line_min = plt.axhline(y=self.min_weight, color='g', linestyle='--')
-        plt.legend([line_init, line_min], ['Initial weight', 'Optimized weight'])
+        line_right = plt.axhline(y = 426, color = "purple", linestyle = "--")
+        plt.legend([line_init, line_min, line_right], ['Initial weight', 'Optimized weight', 'standard_weight'])
         plt.ylabel('Weight')
         plt.xlabel('Iteration')
+        plt.annotate("%s" % self.min_weight, xy=(0, self.min_weight))
         plt.show()

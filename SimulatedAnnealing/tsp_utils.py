@@ -1,18 +1,11 @@
-import math
 import random
 import numpy as np
 
-
 def vectorToDistMatrix(coords):
-
-    return np.sqrt((np.square((coords[:, np.newaxis]) - coords.astype('float64')).sum(axis=2)))
-
-
-
+    return np.sqrt((np.square((coords[:, np.newaxis]).astype('float64') - coords.astype('float64')).sum(axis=2)))
 
 
 def nearestNeighbourSolution(dist_matrix):
-
     node = random.randrange(len(dist_matrix))
     result = [node]
 
