@@ -12,7 +12,7 @@ def main():
     alpha = 0.9999
     stopping_iter = 50000
 
-    problem = "tsp_problems/eil51.txt"
+    problem = "problems/eil51.txt"
 
     nodes = NodesGenerator(problem).generate()
 
