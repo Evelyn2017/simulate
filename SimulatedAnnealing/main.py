@@ -7,16 +7,18 @@ from SimulatedAnnealing.simulated_annealing import SimulatedAnnealing
 
 
 def main():
-    temp = 10
-    stopping_temp = 0.001
+
+    temperature = 10
+    stopTemperature = 0.001
     alpha = 0.9999
-    stopping_iter = 50000
+    stopIteration = 50000
+
 
     problem = "problems/eil51.txt"
 
     nodes = NodesGenerator(problem).generate()
 
-    sa = SimulatedAnnealing(nodes, temp, alpha, stopping_temp, stopping_iter)
+    sa = SimulatedAnnealing(nodes, temperature, alpha, stopTemperature, stopIteration)
     sa.anneal()
 
     print("Best solution: " + str(sa.best_solution))
