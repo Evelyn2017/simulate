@@ -6,9 +6,11 @@ from SimulatedAnnealing.problem_define import Problem
 
 class TSP(Problem):
     def __init__(self, problem):
-        self.problem = problem
+        super().__init__(problem)
+
         self.coords = self.parseProblem(problem)
         self.distMatrix = self.coordsToDistMatrix(self.coords)
+        self.sampleSize = len(self.coords)
 
     def parseProblem(self, problem):
         lines = open(problem).readlines()
@@ -24,6 +26,7 @@ class TSP(Problem):
         return sum([self.distMatrix[i, j] for i, j in zip(solution, solution[1:] + [solution[0]])])
 
     '''give coords of every city, transfrom these coords to distance matrix'''
+
     def coordsToDistMatrix(self, coords):
         return np.sqrt((np.square((coords[:, np.newaxis]).astype('float64') - coords.astype('float64')).sum(axis=2)))
 
@@ -42,6 +45,12 @@ class TSP(Problem):
 
         return result
 
+    def generateNewSolution(self, solution):
+        l = random.randint(2, self.sampleSize - 1)
+        i = random.randint(0, self.sampleSize - l)
+        solution[i: (i + l)] = reversed(solution[i: (i + l)])
+
+        return solution
 
 
 # def vectorToDistMatrix(coords):
