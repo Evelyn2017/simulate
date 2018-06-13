@@ -5,8 +5,6 @@ import numpy as np
 
 def animateTSP(history, points):
 
-
-
     key_frames_mult = len(history) // 1500
 
     fig, ax = plt.subplots()
