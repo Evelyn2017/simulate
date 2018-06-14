@@ -2,28 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48f34a77-e73b-45cb-9e3c-32f3f6a4ea35" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/SimulatedAnnealing/anneal.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/SimulatedAnnealing/main.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/SimulatedAnnealing/node_generator.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/SimulatedAnnealing/parser/Parser.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/SimulatedAnnealing/parser/eil51.tsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/SimulatedAnnealing/parser/parse.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/SimulatedAnnealing/parser/tsp_classify_utils.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/SimulatedAnnealing/problem_define.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/SimulatedAnnealing/simulated_annealing.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/SimulatedAnnealing/tsp_problems/eil51.tsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/SimulatedAnnealing/tsp_utils.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/anneal/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/commonSimulate/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/commonSimulate/animated_visualizer.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/commonSimulate/nodes/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/commonSimulate/nodes/eil51.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/commonSimulate/nodes_generator.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/commonSimulate/simulated_annealing.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/commonSimulate/tsp.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/commonSimulate/tsp_utils.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cwc.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SimulatedAnnealing/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SimulatedAnnealing/parser/__init__.py" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -516,7 +496,14 @@
       <option name="project" value="LOCAL" />
       <updated>1528956403404</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="delete some files">
+      <created>1528956715803</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1528956715803</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -527,12 +514,12 @@
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15972222" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="0" y="0" width="297" height="670" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32957393" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19751553" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19751553" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16319445" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16319445" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10902778" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10902778" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -562,7 +549,8 @@
     <MESSAGE value="v3.1" />
     <MESSAGE value="csv formated" />
     <MESSAGE value="history directories" />
-    <option name="LAST_COMMIT_MESSAGE" value="history directories" />
+    <MESSAGE value="delete some files" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete some files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
