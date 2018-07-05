@@ -1,4 +1,5 @@
 from simanneal.anneal import Anneal
+from simanneal.problem_define.constraint import Constraint
 from simanneal.problem_define.tsp_utils import TSP
 from simanneal.visualize import annealPlot
 
@@ -8,15 +9,16 @@ def main():
     and known optimal solution to the problem"""
 
     # problem = Function("function", -1549)
-    problem = TSP("data/eil51.csv", 426)
+    #problem = TSP("data/eil51.csv", 426)
+    problem = Constraint("constraint")
 
-    temperature = 10
+    temperature = 10000
     stopTemperature = 0.001
-    alpha = 0.9999
-    stopIteration = 30
+    alpha = 0.975
+    stopIteration = 50
 
     '''save history data in files. boolean. default = False'''
-    save = True
+    save = False
 
     params = [problem, temperature, alpha, stopTemperature, stopIteration]
 
