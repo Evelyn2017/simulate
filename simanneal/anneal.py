@@ -88,7 +88,7 @@ class Anneal:
             logging.info("generation : %d" % self.itertion)
             logging.info("current optimal solution costs: %s" % str(self.currentCost))
 
-            candidate = self.problem.disturb(candidate, self.itertion)
+            candidate = self.problem.disturb(candidate)
 
             self.accept(candidate)
             self.temperature *= self.alpha

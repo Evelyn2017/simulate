@@ -9,16 +9,16 @@ def main():
     and known optimal solution to the problem"""
 
     # problem = Function("function", -1549)
-    #problem = TSP("data/eil51.csv", 426)
-    problem = Constraint("constraint")
+    problem = TSP("data/eil51.csv", 426)
+    #problem = Constraint("constraint")
 
     temperature = 10000
     stopTemperature = 0.001
-    alpha = 0.975
-    stopIteration = 50
+    alpha = 0.995
+    stopIteration = 10000
 
     '''save history data in files. boolean. default = False'''
-    save = False
+    save = True
 
     params = [problem, temperature, alpha, stopTemperature, stopIteration]
 
